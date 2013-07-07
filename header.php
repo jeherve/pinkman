@@ -53,7 +53,7 @@
 		
 					<?php if ( '' != $twitter_link ) : ?>
 					<li class="twitter-link">
-						<a href="<?php echo esc_url( $twitter_link ); ?>" class="genericon" title="<?php esc_attr_e( 'Twitter', 'ryu' ); ?>" target="_blank">
+						<a href="<?php echo esc_url( $twitter_link ); ?>" class="genericon" title="<?php esc_attr_e( 'Twitter', 'ryu' ); ?>" target="_blank" rel="me">
 							<span class="screen-reader-text"><?php _e( 'Twitter', 'ryu' ); ?></span>
 						</a>
 					</li>
@@ -61,7 +61,7 @@
 		
 					<?php if ( '' != $facebook_link ) : ?>
 					<li class="facebook-link">
-						<a href="<?php echo esc_url( $facebook_link ); ?>" class="genericon" title="<?php esc_attr_e( 'Facebook', 'ryu' ); ?>" target="_blank">
+						<a href="<?php echo esc_url( $facebook_link ); ?>" class="genericon" title="<?php esc_attr_e( 'Facebook', 'ryu' ); ?>" target="_blank" rel="me">
 							<span class="screen-reader-text"><?php _e( 'Facebook', 'ryu' ); ?></span>
 						</a>
 					</li>
@@ -69,7 +69,7 @@
 		
 					<?php if ( '' != $google_plus_link ) : ?>
 					<li class="google-link">
-						<a href="<?php echo esc_url( $google_plus_link ); ?>" class="genericon" title="<?php esc_attr_e( 'Google Plus', 'ryu' ); ?>" target="_blank">
+						<a href="<?php echo esc_url( $google_plus_link ); ?>" class="genericon" title="<?php esc_attr_e( 'Google Plus', 'ryu' ); ?>" target="_blank" rel="me">
 							<span class="screen-reader-text"><?php _e( 'Google Plus', 'ryu' ); ?></span>
 						</a>
 					</li>
@@ -77,7 +77,7 @@
 		
 					<?php if ( '' != $linkedin_link ) : ?>
 					<li class="linkedin-link">
-						<a href="<?php echo esc_url( $linkedin_link ); ?>" class="genericon" title="<?php esc_attr_e( 'LinkedIn', 'ryu' ); ?>" target="_blank">
+						<a href="<?php echo esc_url( $linkedin_link ); ?>" class="genericon" title="<?php esc_attr_e( 'LinkedIn', 'ryu' ); ?>" target="_blank" rel="me">
 							<span class="screen-reader-text"><?php _e( 'LinkedIn', 'ryu' ); ?></span>
 						</a>
 					</li>
@@ -85,7 +85,7 @@
 		
 					<?php if ( '' != $github_link ) : ?>
 					<li class="github-link">
-						<a href="<?php echo esc_url( $github_link ); ?>" class="genericon" title="<?php esc_attr_e( 'Github', 'ryu' ); ?>" target="_blank">
+						<a href="<?php echo esc_url( $github_link ); ?>" class="genericon" title="<?php esc_attr_e( 'Github', 'ryu' ); ?>" target="_blank" rel="me">
 							<span class="screen-reader-text"><?php _e( 'Github', 'ryu' ); ?></span>
 						</a>
 					</li>
@@ -93,7 +93,7 @@
 		
 					<?php if ( '' != $wporg_link ) : ?>
 					<li class="wporg-link">
-						<a href="<?php echo esc_url( $wporg_link ); ?>" class="genericon" title="<?php esc_attr_e( 'WordPress.org', 'ryu' ); ?>" target="_blank">
+						<a href="<?php echo esc_url( $wporg_link ); ?>" class="genericon" title="<?php esc_attr_e( 'WordPress.org', 'ryu' ); ?>" target="_blank" rel="me">
 							<span class="screen-reader-text"><?php _e( 'WordPress.org', 'ryu' ); ?></span>
 						</a>
 					</li>
