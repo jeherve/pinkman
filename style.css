@@ -127,9 +127,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-h1.site-title {
+h1.site-title, h1.site-title a {
+	color: #f0c674;
 	font-weight: 400;
 	font-size: 24px;
+	text-decoration: none;
 	text-transform: uppercase;
 }
 
@@ -433,11 +435,32 @@ a:active {
 @media (min-width: 769px) {
 	#main {
 		padding-bottom: 6rem;
-		width: 80%;
+		width: 75%;
 	}
 }
 
 /* Header */
+
+.site-branding {
+	text-align: center;
+}
+
+.site-branding .grav-link img {
+	border-radius: 50% 50% 50% 50%;
+	box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5), inset 0 0 2px 1px rgba(0, 0, 0, 0.05);
+}
+
+.site-branding a.grav-link {
+	position: relative;
+	width: 120px;
+	height: 120px;
+}
+@media (max-width: 480px) {
+	.site-branding a.grav-link {
+		width: 40px;
+		height: 40px;
+	}
+}
 
 #masthead {
 	position: relative;
@@ -466,7 +489,6 @@ a:active {
 		right: 0;
 		bottom: 0;
 		left: 0;
-		border-top: 1px solid transparent;
 	}
 }
 @media (min-width: 769px) {
@@ -475,8 +497,7 @@ a:active {
 		right: 0;
 		bottom: 0;
 		left: auto;
-		width: 20%;
-		border-left: 1px solid transparent;
+		width: 25%;
 	}
 }
 @media (min-width: 481px) and (max-width: 768px) {

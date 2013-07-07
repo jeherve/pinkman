@@ -126,9 +126,26 @@ function pinkman_scripts() {
 add_action( 'wp_enqueue_scripts', 'pinkman_scripts' );
 
 /**
- * Implement the Custom Header feature.
+ * Implement the Custom Gravatar in header.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+function pinkman_get_gravatar() {
+
+	// Get default from Discussion Settings.
+	$default = get_option( 'avatar_default', 'mystery' ); // Mystery man default
+	if ( 'mystery' == $default )
+		$default = 'mm';
+	elseif ( 'gravatar_default' == $default )
+		$default = '';
+
+	$url = ( is_ssl() ) ? 'https://secure.gravatar.com' : 'http://gravatar.com';
+	$url .= sprintf( '/avatar/%s/', md5( get_option( 'admin_email' ) ) );
+	$url = add_query_arg( array(
+		's' => 120,
+		'd' => urlencode( $default ),
+	), $url );
+
+	return esc_url_raw( $url );
+}
 
 /**
  * Custom template tags for this theme.
