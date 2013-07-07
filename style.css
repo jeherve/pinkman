@@ -92,6 +92,34 @@ a img {
 }
 
 
+/* =Genericons
+----------------------------------------------- */
+
+/*
+IE8 and below use EOT and allow cross-site embedding.
+IE9 uses WOFF which is base64 encoded to allow cross-site embedding.
+So unfortunately, IE9 will throw a console error, but it'll still work.
+*/
+@font-face {
+	font-family: 'Genericons';
+	src: url('fonts/genericons-regular-webfont.eot');
+	src: url('fonts/genericons-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/genericons-regular-webfont.woff') format('woff'),
+		 url('fonts/genericons-regular-webfont.ttf') format('truetype'),
+		 url('fonts/genericons-regular-webfont.svg#genericonsregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.genericon:before,
+.genericon:after {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1 'Genericons';
+	font-size: 1.6rem;
+	vertical-align: top;
+}
+
+
 /* =Global
 ----------------------------------------------- */
 
@@ -520,6 +548,57 @@ a:active {
 		top: 50%;
 		text-align: center;
 	}
+}
+
+/* Social Links */
+.social-links {
+	display: inline-block;
+	list-style: none;
+	margin: -8px 0 0;
+	vertical-align: top;
+}
+.social-links li {
+	display: block;
+	float: left;
+	margin: 8px 4px 0;
+	padding: 1px 0;
+	width: 32px;
+	height: 32px;
+}
+.social-links a {
+	background-color: rgba(255,255,255,0.15);
+	border-radius: 50%;
+	color: #fff;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	width: 32px;
+	height: 32px;
+}
+.social-links a:hover {
+	background-color: rgba(255,255,255,0.2);
+}
+.social-links a:before {
+	line-height: 2;
+}
+.facebook-link a:before {
+	content: '\f203';
+}
+.twitter-link a:before {
+	content: '\f202';
+}
+.google-link a:before {
+	content: '\f206';
+}
+.linkedin-link a:before {
+	content: '\f208';
+}
+.github-link a:before {
+	content: '\f200';
+}
+.wporg-link a:before {
+	content: '\f205';
 }
 
 
