@@ -107,6 +107,9 @@ add_action( 'widgets_init', 'pinkman_widgets_init' );
  */
 function pinkman_scripts() {
 	wp_enqueue_style( 'pinkman-style', get_stylesheet_uri() );
+	
+	$protocol = is_ssl() ? 'https' : 'http';
+	wp_enqueue_style( 'gfonts', "$protocol://fonts.googleapis.com/css?family=Open+Sans:800,400|Gentium+Book+Basic" );
 
 	wp_enqueue_script( 'pinkman-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
