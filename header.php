@@ -109,7 +109,6 @@
 	<div id="main" class="site-main">
 
 		<nav id="site-navigation" class="navigation-main" role="navigation">
-				<h1 class="menu-toggle"><?php _e( 'Menu', 'pinkman' ); ?></h1>
 				<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'pinkman' ); ?>"><?php _e( 'Skip to content', 'pinkman' ); ?></a></div>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
