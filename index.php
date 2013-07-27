@@ -29,6 +29,8 @@ get_header(); ?>
 					get_template_part( 'content', get_post_format() );
 				?>
 
+			<hr>
+
 			<?php endwhile; ?>
 
 			<?php pinkman_content_nav( 'nav-below' ); ?>
