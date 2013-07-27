@@ -51,7 +51,7 @@ function pinkman_setup() {
 	/**
 	 * Enable support for Post Formats
 	 */
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+	add_theme_support( 'post-formats', array( 'aside', 'image', 'gallery', 'video', 'link' ) );
 	
 	/**
 	 * Enable support for Jetpack Social Links
@@ -75,7 +75,7 @@ add_action( 'after_setup_theme', 'pinkman_setup' );
  */
 function pinkman_register_custom_background() {
 	$args = array(
-		'default-color' => 'ffffff',
+		'default-color' => '1d1f21',
 		'default-image' => '',
 	);
 
