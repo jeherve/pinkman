@@ -35,8 +35,8 @@ function pinkman_content_nav( $nav_id ) {
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'pinkman' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'pinkman' ) . '</span>' ); ?>
+		<?php previous_post_link( '%link', __( '<div class="nav-previous"><span class="meta-nav">Previous Post</span>%title</div>', 'pinkman' ) ); ?>
+		<?php next_post_link( '%link', __( '<div class="nav-next"><span class="meta-nav">Next Post</span>%title</div>', 'pinkman' ) ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
