@@ -15,7 +15,7 @@ if ( empty( $grid ) || 6 < count( $grid ) )
     <?php foreach ( $grid as $post ) : setup_postdata( $post ); ?>
           
         <div class="grid-thumb">
-        	<a href="<?php the_permalink(); ?>" rel="bookmark">
+        	<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
             	<?php the_post_thumbnail(); ?>
         	</a>
         </div><!-- .grid-thumb -->
