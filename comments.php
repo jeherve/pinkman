@@ -47,7 +47,12 @@ if ( post_password_required() )
 				 * define pinkman_comment() and that will be used instead.
 				 * See pinkman_comment() in inc/template-tags.php for more.
 				 */
-				wp_list_comments( array( 'callback' => 'pinkman_comment' ) );
+				wp_list_comments( 
+					array( 
+						'callback' => 'pinkman_comment',
+						'avatar_size' => '60'
+					)
+				);
 			?>
 		</ol><!-- .comment-list -->
 
