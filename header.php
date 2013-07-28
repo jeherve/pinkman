@@ -107,6 +107,10 @@
 	</header><!-- #masthead -->
 
 	<div id="main" class="site-main">
+		<?php
+			if ( is_home() ) 
+		        get_template_part( 'grid' );
+		?>
 
 		<nav id="site-navigation" class="navigation-main" role="navigation">
 				<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'pinkman' ); ?>"><?php _e( 'Skip to content', 'pinkman' ); ?></a></div>
