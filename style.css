@@ -669,7 +669,7 @@ a:active {
 		display: block;
 		float: right;
 		margin-bottom: 30px;
-		width: 420px;
+		width: 470px;
 	}
 }
 @media (max-width: 481px) {
@@ -795,6 +795,7 @@ a:active {
 #primary .entry-content h6,
 #primary #nav-below,
 #primary .entry-content div.sharedaddy div.sd-content,
+#primary .entry-content div.sd-like,
 #primary #comments {
 	padding: 0 30px;
 }
@@ -872,6 +873,15 @@ footer.entry-meta:before {
 	float: none;
 	margin: 0;
 	width: 100%;
+}
+
+.entry-content div.sharedaddy div.sd-like h3 {
+	width: 10%;	
+}
+
+.entry-content div.sharedaddy .post-likes-widget {
+	float: left;
+	margin-bottom: 15px;
 }
 
 /* =Asides
