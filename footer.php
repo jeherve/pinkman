@@ -8,8 +8,6 @@
  */
 ?>
 
-	</div><!-- #main -->
-
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<?php do_action( 'pinkman_credits' ); ?>
@@ -18,6 +16,9 @@
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'pinkman' ), 'Pinkman', '<a href="http://jeremyherve.com" rel="designer">Jeremy Herve</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
+
+	</div><!-- #main -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
