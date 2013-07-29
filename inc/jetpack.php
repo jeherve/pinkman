@@ -24,7 +24,7 @@ function pinkman_jetpack_setup() {
 	add_theme_support( 'featured-content', array(
 	    'featured_content_filter' => 'pinkman_get_featured_posts',
 	    'max_posts'   => 6,
-	    'include_featured' => true,
+	    //'include_featured' => true,
 	) );
 
 }
@@ -40,4 +40,7 @@ function pinkman_get_featured_posts() {
 /**
  * Do not exclude the Featured Posts from the main blog query
  */
-//remove_action( 'pre_get_posts', array( Featured_Content, 'pre_get_posts' ) );
+function jeherve_add_featured_content_to_blog() {
+    remove_action( 'pre_get_posts', array( 'Featured_Content', 'pre_get_posts' ) );
+}
+add_action( 'init', 'jeherve_add_featured_content_to_blog', 31 ); // Immediately after FC hooks in.
