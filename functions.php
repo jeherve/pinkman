@@ -52,10 +52,6 @@ function pinkman_setup() {
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'gallery', 'video', 'link' ) );
 	
-	/**
-	 * Enable support for Jetpack Social Links
-	 */
-	add_theme_support( 'social-links', array( 'facebook', 'twitter', 'linkedin' ) );
 }
 endif; // pinkman_setup
 add_action( 'after_setup_theme', 'pinkman_setup' );

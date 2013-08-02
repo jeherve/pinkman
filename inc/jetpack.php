@@ -26,6 +26,16 @@ function pinkman_jetpack_setup() {
 	    'max_posts'   => 6,
 	    //'include_featured' => true,
 	) );
+	
+	/**
+	 * Add theme support for Social Links.
+	 * See: http://jetpack.me/support/featured-content/
+	 */
+	add_theme_support( 'social-links', array(
+		'facebook',
+		'twitter',
+		'linkedin'
+	) );
 
 }
 add_action( 'after_setup_theme', 'pinkman_jetpack_setup' );
