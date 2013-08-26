@@ -1,0 +1,3 @@
+[submodule "lib/tonesque"]
+	path = lib/tonesque
+	url = https://github.com/mtias/tonesque.git
