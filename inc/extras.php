@@ -88,3 +88,62 @@ function pinkman_get_link_url() {
 
 	return ( $has_url ) ? $has_url : apply_filters( 'the_permalink', get_permalink() );
 }
+
+/**
+ * Get a random image
+ *
+ * @uses wp_get_attachment_image_src() to get the source of a thumbnail image in any post
+ * Props @designsimply - https://github.com/designsimply/photo-addict/
+ *
+ * @since Pinkman 1.2
+ *
+ * @return string The thumbnail image source
+ */
+function pinkman_get_random_image_src( $size = 'thumbnail' ) {
+	$random_image = array();
+	$args = array(
+		'post_type' => 'attachment',
+		'post_mime_type' =>'image',
+		'post_status' => 'inherit',
+		'posts_per_page' => 1,
+		'orderby' => 'rand'
+	);
+	$query_images = new WP_Query( $args );
+
+	if ( ! in_array( $size, array( 'thumbnail', 'medium', 'large', 'full' ) ) )
+		$size = 'thumbnail';
+
+	if ( isset( $query_images->post->ID ) ) {
+		$random_image = wp_get_attachment_image_src ( $query_images->post->ID, $size);
+	}
+
+	if ( isset( $random_image[0] ) )
+		return $random_image[0];
+}
+
+/**
+ * Get an image from a post
+ *
+ * @uses Jetpack_PostImages::get_image( $post_id ) to get the source of an image in a post
+ * @param int $post_id The post ID to check
+ *
+ * If it doesn't return anything, grab random image from pinkman_get_random_image_src()
+ *
+ * @since Pinkman 1.2
+ *
+ * @return string the image source
+ */
+function pinkman_get_post_image() {
+	$post_id = get_the_ID();
+
+	if ( class_exists( 'Jetpack_PostImages' ) ) {
+		$the_image = Jetpack_PostImages::get_image( $post_id );
+		if ( !empty( $the_image['src'] ) )
+			$the_image = $the_image['src'];
+	}
+
+	if ( empty( $the_image ) )
+		$the_image = pinkman_get_random_image_src( );
+
+	return $the_image;
+}
