@@ -146,7 +146,38 @@ function pinkman_get_post_image() {
 		$the_image = pinkman_get_random_image_src();
 
 	// Generate a Photon URL for that image
-	$the_image = jetpack_photon_url( $the_image );
+	$the_image = apply_filters( 'jetpack_photon_url', $the_image );
 	
 	return $the_image;
 }
+
+
+
+/**
+ * Print css for the background using our background image
+ *
+ * @since Pinkman 1.2
+ */
+function pinkman_bg_css() {
+
+	$my_image = pinkman_get_post_image();
+		
+	echo '<style type="text/css" media="screen">
+		#bg-container {
+			position: fixed;
+			display: block;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: -99;
+			background: url(' . $my_image . ') center / 2000%;
+			opacity: .2;
+			-webkit-filter: blur(50px);
+			filter: blur(50px);
+		}
+		.home #bg-container { background-size: 1000%; opacity: .3; }
+		#bg-container { filter:url(#blur50); } /* SVG blur for Firefox */
+	</style>';	
+}
+add_action( 'wp_head', 'pinkman_bg_css' );

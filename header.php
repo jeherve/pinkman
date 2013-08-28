@@ -20,6 +20,8 @@
 
 <body <?php body_class(); ?>>
 
+<div id="bg-container"></div>
+
 <?php
 	$twitter_link = get_theme_mod( 'jetpack-twitter' );
 	$facebook_link = get_theme_mod( 'jetpack-facebook' );
