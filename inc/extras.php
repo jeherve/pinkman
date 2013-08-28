@@ -143,7 +143,10 @@ function pinkman_get_post_image() {
 	}
 
 	if ( empty( $the_image ) )
-		$the_image = pinkman_get_random_image_src( );
+		$the_image = pinkman_get_random_image_src();
 
+	// Generate a Photon URL for that image
+	$the_image = jetpack_photon_url( $the_image );
+	
 	return $the_image;
 }
