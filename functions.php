@@ -160,9 +160,3 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-/**
- * Fallback to local copy of tonesque if the plugin is not active
- */
-if ( ! class_exists( 'Tonesque' ) )
-	include_once(  get_template_directory() . '/lib/tonesque/tonesque.php' );
