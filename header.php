@@ -25,10 +25,19 @@
 <?php
 	$twitter_link = get_theme_mod( 'jetpack-twitter' );
 	$facebook_link = get_theme_mod( 'jetpack-facebook' );
-	$google_plus_link = get_theme_mod( 'google_plus_link' );
+	$google_plus_link = get_theme_mod( 'jetpack-google_plus' );
 	$linkedin_link = get_theme_mod( 'jetpack-linkedin' );
-	$github_link = get_theme_mod( 'github_link' );
-	$wporg_link = get_theme_mod( 'wporg_link' );
+	$github_link = get_theme_mod( 'jetpack-github' );
+	$wporg_link = get_theme_mod( 'jetpack-wporg' );
+	
+	$social_links = ( '' != $twitter_link
+		|| '' != $facebook_link
+		|| '' != $linkedin_link
+		|| '' != $google_plus_link
+		|| '' != $github_link
+		|| '' != $wporg_link
+	);
+	$services = get_theme_support( 'social-links' );
 ?>
 
 <div id="page" class="hfeed site">
@@ -40,71 +49,52 @@
 			</a>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			
-			<?php
-				if ( '' != $twitter_link
-				  || '' != $facebook_link
-				  || '' != $google_plus_link
-				  || '' != $linkedin_link
-				  || '' != $github_link
-				  || '' != $wporg_link
-				) :
-			?>
+
 			<div id="social-links-wrapper">
 				<ul class="social-links clear">
-		
-					<?php if ( '' != $twitter_link ) : ?>
-					<li class="twitter-link">
-						<a href="<?php echo esc_url( $twitter_link ); ?>" class="genericon" title="<?php esc_attr_e( 'Twitter', 'ryu' ); ?>" target="_blank" rel="me">
-							<span class="screen-reader-text"><?php _e( 'Twitter', 'ryu' ); ?></span>
+
+					<?php
+						foreach ( $services[0] as $service ) :
+						if ( get_theme_mod( "jetpack-$service", false ) ) :
+					?>
+					
+					<li class="<?php echo $service; ?>-link">
+						<a href="<?php echo esc_url( get_theme_mod( "jetpack-$service", '' ) ); ?>" class="genericon" title="<?php echo esc_attr( ucfirst( $service ) ); ?>" target="_blank">
+							<span class="screen-reader-text"><?php echo ucfirst( $service ); ?></span>
 						</a>
 					</li>
-					<?php endif; ?>
-		
-					<?php if ( '' != $facebook_link ) : ?>
-					<li class="facebook-link">
-						<a href="<?php echo esc_url( $facebook_link ); ?>" class="genericon" title="<?php esc_attr_e( 'Facebook', 'ryu' ); ?>" target="_blank" rel="me">
-							<span class="screen-reader-text"><?php _e( 'Facebook', 'ryu' ); ?></span>
-						</a>
-					</li>
-					<?php endif; ?>
-		
+					<?php
+						endif;
+						endforeach;
+					?>
+
 					<?php if ( '' != $google_plus_link ) : ?>
 					<li class="google-link">
-						<a href="<?php echo esc_url( $google_plus_link ); ?>" class="genericon" title="<?php esc_attr_e( 'Google Plus', 'ryu' ); ?>" target="_blank" rel="me">
-							<span class="screen-reader-text"><?php _e( 'Google Plus', 'ryu' ); ?></span>
+						<a href="<?php echo esc_url( $google_plus_link ); ?>" class="genericon" title="<?php esc_attr_e( 'Google Plus', 'pinkman' ); ?>" target="_blank" rel="me">
+							<span class="screen-reader-text"><?php _e( 'Google Plus', 'pinkman' ); ?></span>
 						</a>
 					</li>
 					<?php endif; ?>
-		
-					<?php if ( '' != $linkedin_link ) : ?>
-					<li class="linkedin-link">
-						<a href="<?php echo esc_url( $linkedin_link ); ?>" class="genericon" title="<?php esc_attr_e( 'LinkedIn', 'ryu' ); ?>" target="_blank" rel="me">
-							<span class="screen-reader-text"><?php _e( 'LinkedIn', 'ryu' ); ?></span>
-						</a>
-					</li>
-					<?php endif; ?>
-		
+
 					<?php if ( '' != $github_link ) : ?>
 					<li class="github-link">
-						<a href="<?php echo esc_url( $github_link ); ?>" class="genericon" title="<?php esc_attr_e( 'Github', 'ryu' ); ?>" target="_blank" rel="me">
-							<span class="screen-reader-text"><?php _e( 'Github', 'ryu' ); ?></span>
+						<a href="<?php echo esc_url( $github_link ); ?>" class="genericon" title="<?php esc_attr_e( 'Github', 'pinkman' ); ?>" target="_blank" rel="me">
+							<span class="screen-reader-text"><?php _e( 'Github', 'pinkman' ); ?></span>
 						</a>
 					</li>
 					<?php endif; ?>
-		
+
 					<?php if ( '' != $wporg_link ) : ?>
 					<li class="wporg-link">
-						<a href="<?php echo esc_url( $wporg_link ); ?>" class="genericon" title="<?php esc_attr_e( 'WordPress.org', 'ryu' ); ?>" target="_blank" rel="me">
-							<span class="screen-reader-text"><?php _e( 'WordPress.org', 'ryu' ); ?></span>
+						<a href="<?php echo esc_url( $wporg_link ); ?>" class="genericon" title="<?php esc_attr_e( 'WordPress.org', 'pinkman' ); ?>" target="_blank" rel="me">
+							<span class="screen-reader-text"><?php _e( 'WordPress.org', 'pinkman' ); ?></span>
 						</a>
 					</li>
 					<?php endif; ?>
+
 				</ul>
 			</div><!-- /#social-links-wrapper -->
-			<?php endif; ?>
-
-		
+	
 		</div><!-- .site-branding -->
 	</header><!-- #masthead -->
 

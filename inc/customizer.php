@@ -19,39 +19,39 @@ function pinkman_customize_register( $wp_customize ) {
 		'priority'      => 35,
 	) );
 
-	$wp_customize->add_setting( 'google_plus_link', array(
+	$wp_customize->add_setting( 'jetpack-google_plus', array(
 		'default'       => '',
 		'type'          => 'theme_mod',
 		'capability'    => 'edit_theme_options',
 	) );
 
-	$wp_customize->add_control( 'google_plus_link', array(
+	$wp_customize->add_control( 'jetpack-google_plus', array(
 		'label'         => __( 'Google+ Link', 'pinkman' ),
 		'section'       => 'pinkman_theme_options',
 		'type'          => 'text',
 		'priority'      => 1,
 	) );
 
-	$wp_customize->add_setting( 'github_link', array(
+	$wp_customize->add_setting( 'jetpack-github', array(
 		'default'       => '',
 		'type'          => 'theme_mod',
 		'capability'    => 'edit_theme_options',
 	) );
 
-	$wp_customize->add_control( 'github_link', array(
+	$wp_customize->add_control( 'jetpack-github', array(
 		'label'         => __( 'Github Link', 'pinkman' ),
 		'section'       => 'pinkman_theme_options',
 		'type'          => 'text',
 		'priority'      => 2,
 	) );
 	
-	$wp_customize->add_setting( 'wporg_link', array(
+	$wp_customize->add_setting( 'jetpack-wporg', array(
 		'default'       => '',
 		'type'          => 'theme_mod',
 		'capability'    => 'edit_theme_options',
 	) );
 
-	$wp_customize->add_control( 'wporg_link', array(
+	$wp_customize->add_control( 'jetpack-wporg', array(
 		'label'         => __( 'WordPress.org Link', 'pinkman' ),
 		'section'       => 'pinkman_theme_options',
 		'type'          => 'text',
