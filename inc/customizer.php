@@ -8,13 +8,17 @@
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
+ * Create Theme mods for links to social media accounts.
+ *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function pinkman_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-		$wp_customize->add_section( 'pinkman_theme_options', array(
+	
+	// Social Links theme options
+	$wp_customize->add_section( 'pinkman_theme_options', array(
 		'title'         => __( 'Theme Options', 'pinkman' ),
 		'priority'      => 35,
 	) );
@@ -57,7 +61,6 @@ function pinkman_customize_register( $wp_customize ) {
 		'type'          => 'text',
 		'priority'      => 3,
 	) );
-
 
 }
 add_action( 'customize_register', 'pinkman_customize_register' );
