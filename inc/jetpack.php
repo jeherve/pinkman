@@ -29,7 +29,7 @@ function pinkman_jetpack_setup() {
 	
 	/**
 	 * Add theme support for Social Links.
-	 * See: http://jetpack.me/support/featured-content/
+	 * See: http://jetpack.me/support/social-links/
 	 */
 	add_theme_support( 'social-links', array(
 		'facebook',
