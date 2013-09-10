@@ -224,6 +224,11 @@ h2.site-description {
 	padding: 0 10px;
 }
 
+.entry-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
 hr {
 	background-color: #cc6666;
 	border: 0;
