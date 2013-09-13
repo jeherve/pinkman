@@ -1144,6 +1144,7 @@ object {
 
 #infinite-footer {
 	font-family: 'Open Sans', sans-serif;
+	z-index: 2;
 }
 
 
