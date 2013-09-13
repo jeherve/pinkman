@@ -147,7 +147,7 @@ function pinkman_get_post_image() {
 
 	// Generate a Photon URL for that image
 	$the_image = apply_filters( 'jetpack_photon_url', $the_image );
-	
+
 	return $the_image;
 }
 
@@ -161,7 +161,7 @@ function pinkman_get_post_image() {
 function pinkman_bg_css() {
 
 	$my_image = pinkman_get_post_image();
-		
+
 	echo '<style type="text/css" media="screen">
 		#bg-container {
 			position: fixed;
@@ -192,7 +192,7 @@ function pinkman_cust_credit() {
 	$credits = '<a href="http://wordpress.org/" rel="generator">Proudly powered by WordPress</a> ';
 	$credits .= sprintf( __( 'Theme: %1$s.', 'jetpack' ), function_exists( 'wp_get_theme' ) ? wp_get_theme()->Name : get_current_theme() );
 	$credits .= ' (<a href="http://jeremyherve.com/?p=2468">More about this theme</a>)';
-	
-    return $credits;
+
+	return $credits;
 }
 add_filter( 'infinite_scroll_credit', 'pinkman_cust_credit' );
