@@ -80,6 +80,9 @@ q:before {
 	font-size: 80px !important;
 	padding-right: 10px;
 }
+#comments blockquote:before {
+	font-size: 24px !important;
+}
 blockquote, q {
 	quotes: "" "";
 }
