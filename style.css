@@ -901,7 +901,8 @@ footer.entry-meta:before {
 
 /*Syntax Highligther */
 .entry-content .syntaxhighlighter {
-	background-color: #1d1f21 !important;
+	padding-top: 15px;
+	padding-bottom:15px;
 }
 
 /* =Sharing / Likes / G+
