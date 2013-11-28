@@ -51,7 +51,7 @@ function pinkman_setup() {
 	 * Enable support for Post Formats
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'gallery', 'video', 'link' ) );
-	
+
 }
 endif; // pinkman_setup
 add_action( 'after_setup_theme', 'pinkman_setup' );
@@ -107,9 +107,9 @@ add_action( 'widgets_init', 'pinkman_widgets_init' );
  */
 function pinkman_scripts() {
 	wp_enqueue_style( 'pinkman-style', get_stylesheet_uri() );
-	
+
 	$protocol = is_ssl() ? 'https' : 'http';
-	wp_enqueue_style( 'gfonts', "$protocol://fonts.googleapis.com/css?family=Open+Sans:800,400|Gentium+Book+Basic" );
+	wp_enqueue_style( 'gfonts', "$protocol://fonts.googleapis.com/css?family=Open+Sans:700,400,800" );
 
 	wp_enqueue_script( 'pinkman-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 

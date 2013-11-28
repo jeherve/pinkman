@@ -142,7 +142,7 @@ select,
 textarea {
 	background: #1d1f21;
 	color: #4d4d4c;
-	font-family: 'Gentium Book Basic', serif;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	font-size: 20px;
 	font-size: 1.6rem;
@@ -357,7 +357,7 @@ input[type="submit"] {
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 800;
+	font-weight: 700;
 	line-height: 1.5;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -678,7 +678,7 @@ a:active {
 		display: block;
 		float: right;
 		margin-bottom: 30px;
-		width: 470px;
+		width: 501px;
 	}
 }
 @media (max-width: 481px) {
@@ -1075,7 +1075,7 @@ object {
 #comments .comment-author cite, #comments .comment-author cite a {
 	color: #4d4d4c;
 	font-style: normal;
-	font-weight: 800;
+	font-weight: 700;
 	text-transform: uppercase;
 }
 
