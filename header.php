@@ -68,14 +68,6 @@
 						endforeach;
 					?>
 
-					<?php if ( '' != $google_plus_link ) : ?>
-					<li class="google-link">
-						<a href="<?php echo esc_url( $google_plus_link ); ?>" class="genericon" title="<?php esc_attr_e( 'Google Plus', 'pinkman' ); ?>" target="_blank" rel="me">
-							<span class="screen-reader-text"><?php _e( 'Google Plus', 'pinkman' ); ?></span>
-						</a>
-					</li>
-					<?php endif; ?>
-
 					<?php if ( '' != $github_link ) : ?>
 					<li class="github-link">
 						<a href="<?php echo esc_url( $github_link ); ?>" class="genericon" title="<?php esc_attr_e( 'Github', 'pinkman' ); ?>" target="_blank" rel="me">

@@ -23,19 +23,6 @@ function pinkman_customize_register( $wp_customize ) {
 		'priority'      => 35,
 	) );
 
-	$wp_customize->add_setting( 'jetpack-google_plus', array(
-		'default'       => '',
-		'type'          => 'theme_mod',
-		'capability'    => 'edit_theme_options',
-	) );
-
-	$wp_customize->add_control( 'jetpack-google_plus', array(
-		'label'         => __( 'Google+ Link', 'pinkman' ),
-		'section'       => 'pinkman_theme_options',
-		'type'          => 'text',
-		'priority'      => 1,
-	) );
-
 	$wp_customize->add_setting( 'jetpack-github', array(
 		'default'       => '',
 		'type'          => 'theme_mod',

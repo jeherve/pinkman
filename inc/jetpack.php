@@ -34,7 +34,8 @@ function pinkman_jetpack_setup() {
 	add_theme_support( 'social-links', array(
 		'facebook',
 		'twitter',
-		'linkedin'
+		'linkedin',
+		'google_plus'
 	) );
 
 }

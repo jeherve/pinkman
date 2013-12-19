@@ -647,7 +647,7 @@ a:active {
 .twitter-link a:before {
 	content: '\f202';
 }
-.google-link a:before {
+.google_plus-link a:before {
 	content: '\f206';
 }
 .linkedin-link a:before {
