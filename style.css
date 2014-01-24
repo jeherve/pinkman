@@ -908,7 +908,7 @@ footer.entry-meta:before {
 /* =Sharing / Likes / G+
 ----------------------------------------------- */
 
-.entry-content div.sharedaddy div.sd-block {
+#primary .entry-content div.sharedaddy div.sd-block {
 	border-top: 0 none;
 	margin-bottom: 1em;
 }
@@ -921,18 +921,18 @@ footer.entry-meta:before {
 	margin-left: 7px;
 }
 
-.entry-content div.sharedaddy div.sd-content {
+#primary .entry-content div.sharedaddy div.sd-content {
 	float: none;
 }
 
-.entry-content div.sd-like h3,
-.entry-content div.sharedaddy div.sd-sharing h3,
-.entry-content div.sd-gplus h3 {
+#primary .entry-content div.sd-like h3,
+#primary .entry-content div.sharedaddy div.sd-sharing h3,
+#primary .entry-content div.sd-gplus h3 {
 	color: #8e908c;
-	width: 10% !important;	
+	width: 10%;
 }
 
-.entry-content div.sharedaddy .post-likes-widget {
+#primary .entry-content div.sharedaddy .post-likes-widget {
 	float: left;
 	margin-bottom: 15px;
 }
