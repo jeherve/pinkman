@@ -16,7 +16,7 @@ function pinkman_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	
+
 	// Social Links theme options
 	$wp_customize->add_section( 'pinkman_theme_options', array(
 		'title'         => __( 'Theme Options', 'pinkman' ),
@@ -24,33 +24,42 @@ function pinkman_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'jetpack-github', array(
-		'default'       => '',
-		'type'          => 'theme_mod',
-		'capability'    => 'edit_theme_options',
+		'default'           => '',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'pinkman_sanitize_urls',
 	) );
 
 	$wp_customize->add_control( 'jetpack-github', array(
-		'label'         => __( 'Github Link', 'pinkman' ),
-		'section'       => 'pinkman_theme_options',
-		'type'          => 'text',
-		'priority'      => 2,
+		'label'             => __( 'Github Link', 'pinkman' ),
+		'section'           => 'pinkman_theme_options',
+		'type'              => 'text',
+		'priority'          => 2,
 	) );
-	
+
 	$wp_customize->add_setting( 'jetpack-wporg', array(
-		'default'       => '',
-		'type'          => 'theme_mod',
-		'capability'    => 'edit_theme_options',
+		'default'           => '',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'pinkman_sanitize_urls',
 	) );
 
 	$wp_customize->add_control( 'jetpack-wporg', array(
-		'label'         => __( 'WordPress.org Link', 'pinkman' ),
-		'section'       => 'pinkman_theme_options',
-		'type'          => 'text',
-		'priority'      => 3,
+		'label'             => __( 'WordPress.org Link', 'pinkman' ),
+		'section'           => 'pinkman_theme_options',
+		'type'              => 'text',
+		'priority'          => 3,
 	) );
 
 }
 add_action( 'customize_register', 'pinkman_customize_register' );
+
+/**
+ * Sanitize URLS
+ */
+function pinkman_sanitize_urls( $value ) {
+	return esc_url( $value );
+}
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
