@@ -29,7 +29,7 @@
 	$linkedin_link = get_theme_mod( 'jetpack-linkedin' );
 	$github_link = get_theme_mod( 'jetpack-github' );
 	$wporg_link = get_theme_mod( 'jetpack-wporg' );
-	
+
 	$social_links = ( '' != $twitter_link
 		|| '' != $facebook_link
 		|| '' != $linkedin_link
@@ -57,7 +57,7 @@
 						foreach ( $services[0] as $service ) :
 						if ( get_theme_mod( "jetpack-$service", false ) ) :
 					?>
-					
+
 					<li class="<?php echo $service; ?>-link">
 						<a href="<?php echo esc_url( get_theme_mod( "jetpack-$service", '' ) ); ?>" class="genericon" title="<?php echo esc_attr( ucfirst( $service ) ); ?>" target="_blank">
 							<span class="screen-reader-text"><?php echo ucfirst( $service ); ?></span>
@@ -86,14 +86,14 @@
 
 				</ul>
 			</div><!-- /#social-links-wrapper -->
-	
+
 		</div><!-- .site-branding -->
 	</header><!-- #masthead -->
 
 	<div id="main" class="site-main">
 		<?php
-			if ( is_home() ) 
-		        get_template_part( 'grid' );
+			if ( is_home() )
+				get_template_part( 'grid' );
 		?>
 
 		<nav id="site-navigation" class="navigation-main" role="navigation">
