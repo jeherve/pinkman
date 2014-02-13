@@ -45,7 +45,7 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="grav-link">
-				<img src="<?php echo pinkman_get_gravatar(); ?>" width="120" height="120" />
+				<img src="<?php echo pinkman_get_gravatar(); ?>" class="no-grav" width="120" height="120" />
 			</a>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
