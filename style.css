@@ -807,6 +807,7 @@ a:active {
 #primary .entry-content div.sd-like,
 #primary .entry-content div.sd-sharing,
 #primary .entry-content div.sd-gplus,
+#primary .entry-content div.jp-relatedposts,
 #primary #comments {
 	padding: 0 30px;
 }
@@ -927,8 +928,10 @@ footer.entry-meta:before {
 
 #primary .entry-content div.sd-like h3,
 #primary .entry-content div.sharedaddy div.sd-sharing h3,
-#primary .entry-content div.sd-gplus h3 {
+#primary .entry-content div.sd-gplus h3,
+#primary .entry-content div.jp-relatedposts .jp-relatedposts-headline {
 	color: #8e908c;
+	padding: 0 30px 0 0;
 	width: 10%;
 }
 
