@@ -181,18 +181,3 @@ function pinkman_bg_css() {
 	</style>';	
 }
 add_action( 'wp_head', 'pinkman_bg_css' );
-
-/**
- * Customize the credits appearing in the Infinite Scroll footer
- *
- * @since Pinkman 1.2.3
- */
-function pinkman_cust_credit() {
-
-	$credits = '<a href="http://wordpress.org/" rel="generator">Proudly powered by WordPress</a> ';
-	$credits .= sprintf( __( 'Theme: %1$s.', 'jetpack' ), function_exists( 'wp_get_theme' ) ? wp_get_theme()->Name : get_current_theme() );
-	$credits .= ' (<a href="http://jeremyherve.com/?p=2468">More about this theme</a>)';
-
-	return $credits;
-}
-add_filter( 'infinite_scroll_credit', 'pinkman_cust_credit' );
