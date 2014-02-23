@@ -59,7 +59,7 @@
 					?>
 
 					<li class="<?php echo $service; ?>-link">
-						<a href="<?php echo esc_url( get_theme_mod( "jetpack-$service", '' ) ); ?>" class="genericon" title="<?php echo esc_attr( ucfirst( $service ) ); ?>" target="_blank">
+						<a href="<?php echo esc_url( get_theme_mod( "jetpack-$service", '' ) ); ?>" class="genericon" title="<?php echo esc_attr( ucfirst( $service ) ); ?>" target="_blank" rel="me">
 							<span class="screen-reader-text"><?php echo ucfirst( $service ); ?></span>
 						</a>
 					</li>
