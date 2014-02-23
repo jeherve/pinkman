@@ -145,8 +145,14 @@ function pinkman_get_post_image() {
 	if ( empty( $the_image ) )
 		$the_image = pinkman_get_random_image_src();
 
-	// Generate a Photon URL for that image
-	$the_image = apply_filters( 'jetpack_photon_url', $the_image );
+	// Generate a Photon URL for that image, and use the smooth Photon parameter to get things blurry
+	// @to-do: the resize parameter is still added. I should remove it.
+	$args = array (
+		'w' => '1280',
+		'h' => '800',
+		'smooth' => '10',
+	);
+	$the_image = jetpack_photon_url ( $the_image, $args );
 
 	return $the_image;
 }
@@ -171,16 +177,13 @@ function pinkman_bg_css() {
 			top: 0;
 			left: 0;
 			z-index: -99;
-			background: url(' . $my_image . ') center / 2000%;
+			background: url(' . $my_image . ') center;
 			opacity: .2;
-			-webkit-filter: blur(50px);
-			filter: blur(50px);
 		}
-		.home #bg-container { background-size: 1000%; opacity: .3; }
-		#bg-container { filter:url(#blur50); } /* SVG blur for Firefox */
-	</style>';	
+		.home #bg-container { opacity: .3; }
+	</style>';
 }
-add_action( 'wp_head', 'pinkman_bg_css' );
+//add_action( 'wp_head', 'pinkman_bg_css' );
 
 /**
  * Customize the credits appearing in the Infinite Scroll footer
