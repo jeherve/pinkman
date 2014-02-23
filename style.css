@@ -1021,10 +1021,8 @@ object {
 	text-align: left;
 	width: 100%;
 }
-[class*="navigation"] .nav-previous {
-	border-bottom: 1px solid #8e908c;
-}
 [class*="navigation"] .nav-next {
+	border-bottom: 1px solid #8e908c;
 	margin: 0;
 }
 [class*="navigation"] .meta-nav {
