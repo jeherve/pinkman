@@ -133,8 +133,7 @@ function pinkman_get_random_image_src( $size = 'thumbnail' ) {
  *
  * @return string the image source
  */
-function pinkman_get_post_image() {
-	$post_id = get_the_ID();
+function pinkman_get_post_image( $post_id ) {
 
 	if ( class_exists( 'Jetpack_PostImages' ) ) {
 		$the_image = Jetpack_PostImages::get_image( $post_id );
@@ -158,9 +157,9 @@ function pinkman_get_post_image() {
  *
  * @since Pinkman 1.2
  */
-function pinkman_bg_css() {
+function pinkman_bg_css( $post_id ) {
 
-	$my_image = pinkman_get_post_image();
+	$my_image = pinkman_get_post_image( $post_id );
 
 	echo '<style type="text/css" media="screen">
 		#bg-container {
