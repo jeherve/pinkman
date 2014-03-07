@@ -16,7 +16,7 @@ function pinkman_jetpack_setup() {
 		'container' => 'content',
 		'footer'    => 'page',
 	) );
-	
+
 	/**
 	 * Add theme support for Featured Content.
 	 * See: http://jetpack.me/support/featured-content/
@@ -26,7 +26,7 @@ function pinkman_jetpack_setup() {
 	    'max_posts'   => 6,
 	    //'include_featured' => true,
 	) );
-	
+
 	/**
 	 * Add theme support for Social Links.
 	 * See: http://jetpack.me/support/social-links/
