@@ -787,12 +787,18 @@ a:active {
 #primary header,
 #primary footer,
 #primary .entry-content p,
+#primary .entry-content table,
+#primary .entry-content dl,
+#primary .entry-content address,
+#primary .entry-content form,
 #primary .entry-summary p,
+#primary .entry-content h1,
 #primary .entry-content h2,
 #primary .entry-content h3,
 #primary .entry-content h4,
 #primary .entry-content h5,
 #primary .entry-content h6,
+#primary .page-links,
 #primary #nav-below,
 #primary .entry-content div.sharedaddy div.sd-content,
 #primary .entry-content div.sd-like,
@@ -1017,10 +1023,8 @@ object {
 	text-align: left;
 	width: 100%;
 }
-[class*="navigation"] .nav-previous {
-	border-bottom: 1px solid #8e908c;
-}
 [class*="navigation"] .nav-next {
+	border-bottom: 1px solid #8e908c;
 	margin: 0;
 }
 [class*="navigation"] .meta-nav {
@@ -1120,7 +1124,7 @@ object {
 ----------------------------------------------- */
 
 #secondary {
-	background: #1d1f21;
+	padding: 30px;
 }
 
 .widget {

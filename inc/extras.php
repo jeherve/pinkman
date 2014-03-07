@@ -133,8 +133,7 @@ function pinkman_get_random_image_src( $size = 'thumbnail' ) {
  *
  * @return string the image source
  */
-function pinkman_get_post_image() {
-	$post_id = get_the_ID();
+function pinkman_get_post_image( $post_id ) {
 
 	if ( class_exists( 'Jetpack_PostImages' ) ) {
 		$the_image = Jetpack_PostImages::get_image( $post_id );
@@ -158,9 +157,9 @@ function pinkman_get_post_image() {
  *
  * @since Pinkman 1.2
  */
-function pinkman_bg_css() {
+function pinkman_bg_css( $post_id ) {
 
-	$my_image = pinkman_get_post_image();
+	$my_image = pinkman_get_post_image( $post_id );
 
 	echo '<style type="text/css" media="screen">
 		#bg-container {
@@ -181,18 +180,3 @@ function pinkman_bg_css() {
 	</style>';	
 }
 add_action( 'wp_head', 'pinkman_bg_css' );
-
-/**
- * Customize the credits appearing in the Infinite Scroll footer
- *
- * @since Pinkman 1.2.3
- */
-function pinkman_cust_credit() {
-
-	$credits = '<a href="http://wordpress.org/" rel="generator">Proudly powered by WordPress</a> ';
-	$credits .= sprintf( __( 'Theme: %1$s.', 'jetpack' ), function_exists( 'wp_get_theme' ) ? wp_get_theme()->Name : get_current_theme() );
-	$credits .= ' (<a href="http://jeremyherve.com/?p=2468">More about this theme</a>)';
-
-	return $credits;
-}
-add_filter( 'infinite_scroll_credit', 'pinkman_cust_credit' );
