@@ -13,7 +13,7 @@
 			<?php do_action( 'pinkman_credits' ); ?>
 			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'pinkman' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'pinkman' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'pinkman' ), 'Pinkman', '<a href="http://jeremyherve.com" rel="designer">Jeremy Herve</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'pinkman' ), 'Pinkman', '<a href="http://jeremy.hu" rel="designer">Jeremy Herve</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 
